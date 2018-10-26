@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++函数,">
+  <meta name="keywords" content="C++优先队列,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="c++中的sort与qsort的使用 sort函数  sort(arr, arr+n,  cmp)函数有三个参数：数组首地址，数组首地址加上要排序的元素个数，比较函数cmp；如果第三个参数不写则按照降序排列。  cmp函数的编写： 1234bool cmp(int a, int b)&amp;#123;    return a &amp;gt; b;//按照降序排列&amp;#125;    qosrt函数  qsort">
-<meta name="keywords" content="C++函数">
+<meta name="description" content="c++优先队列的总结 如下代码，优先队列是按照元素由大到小排列的，a.x &amp;gt; b.x则a &amp;lt; b，排列顺序是：ba，所以x越小越排在前面。   123456789#include&amp;lt;queue&amp;gt;using namespace std;struct node&amp;#123;	int x,y;    bool operator &amp;lt; (const node &amp;amp;a) con">
+<meta name="keywords" content="C++优先队列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++的sort与qsort">
-<meta property="og:url" content="http://blog.ranchoy.cn/2018/10/26/c++中的sort与qsort的使用/index.html">
+<meta property="og:title" content="c++优先队列的总结">
+<meta property="og:url" content="http://blog.ranchoy.cn/2018/10/26/c++优先队列的总结/index.html">
 <meta property="og:site_name" content="ranchoy博客">
-<meta property="og:description" content="c++中的sort与qsort的使用 sort函数  sort(arr, arr+n,  cmp)函数有三个参数：数组首地址，数组首地址加上要排序的元素个数，比较函数cmp；如果第三个参数不写则按照降序排列。  cmp函数的编写： 1234bool cmp(int a, int b)&amp;#123;    return a &amp;gt; b;//按照降序排列&amp;#125;    qosrt函数  qsort">
+<meta property="og:description" content="c++优先队列的总结 如下代码，优先队列是按照元素由大到小排列的，a.x &amp;gt; b.x则a &amp;lt; b，排列顺序是：ba，所以x越小越排在前面。   123456789#include&amp;lt;queue&amp;gt;using namespace std;struct node&amp;#123;	int x,y;    bool operator &amp;lt; (const node &amp;amp;a) con">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-26T07:47:20.736Z">
+<meta property="og:updated_time" content="2018-10-26T09:29:07.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++的sort与qsort">
-<meta name="twitter:description" content="c++中的sort与qsort的使用 sort函数  sort(arr, arr+n,  cmp)函数有三个参数：数组首地址，数组首地址加上要排序的元素个数，比较函数cmp；如果第三个参数不写则按照降序排列。  cmp函数的编写： 1234bool cmp(int a, int b)&amp;#123;    return a &amp;gt; b;//按照降序排列&amp;#125;    qosrt函数  qsort">
+<meta name="twitter:title" content="c++优先队列的总结">
+<meta name="twitter:description" content="c++优先队列的总结 如下代码，优先队列是按照元素由大到小排列的，a.x &amp;gt; b.x则a &amp;lt; b，排列顺序是：ba，所以x越小越排在前面。   123456789#include&amp;lt;queue&amp;gt;using namespace std;struct node&amp;#123;	int x,y;    bool operator &amp;lt; (const node &amp;amp;a) con">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.ranchoy.cn/2018/10/26/c++中的sort与qsort的使用/">
+  <link rel="canonical" href="http://blog.ranchoy.cn/2018/10/26/c++优先队列的总结/">
 
 
 
 
 
-  <title>C++的sort与qsort | ranchoy博客</title>
+  <title>c++优先队列的总结 | ranchoy博客</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.ranchoy.cn/2018/10/26/c++中的sort与qsort的使用/">
+    <link itemprop="mainEntityOfPage" href="http://blog.ranchoy.cn/2018/10/26/c++优先队列的总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ranchoy">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++的sort与qsort</h1>
+          <h1 class="post-title" itemprop="name headline">c++优先队列的总结</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-函数/" itemprop="url" rel="index">
-                    <span itemprop="name">C++函数</span>
+                  <a href="/categories/C-优先队列/" itemprop="url" rel="index">
+                    <span itemprop="name">C++优先队列</span>
                   </a>
                 </span>
 
@@ -352,26 +352,14 @@
       
 
       
-        <h2 id="c-中的sort与qsort的使用"><a href="#c-中的sort与qsort的使用" class="headerlink" title="c++中的sort与qsort的使用"></a>c++中的sort与qsort的使用</h2><ol>
-<li><p><strong>sort函数</strong></p>
-<ul>
-<li><p>sort(arr, arr+n,  cmp)函数有三个参数：数组首地址，数组首地址加上要排序的元素个数，比较函数cmp；如果第三个参数不写则按照降序排列。</p>
-</li>
-<li><p>cmp函数的编写：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b;<span class="comment">//按照降序排列</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="c-优先队列的总结"><a href="#c-优先队列的总结" class="headerlink" title="c++优先队列的总结"></a>c++优先队列的总结</h3><ul>
+<li>如下代码，优先队列是按照元素由大到小排列的，a.x &gt; b.x则a &lt; b，排列顺序是：ba，所以x越小越排在前面。 </li>
 </ul>
-</li>
-<li><p><strong>qosrt函数</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> node &amp;a) <span class="keyword">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x &gt; a.x;<span class="comment">//x越小优先级越高</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">priority_quue&lt;<span class="class"><span class="keyword">struct</span> <span class="title">node</span>&gt; <span class="title">pq</span>;</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>qsort(arr, n, sizeof(arr[0]), cmp)函数有四个参数：数组首地址，待排元素个数，单个元素长度，cmp比较函数。</p>
-</li>
-<li><p>cmp比较函数的编写：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="keyword">int</span> *)a - *(<span class="keyword">int</span> *)b;<span class="comment">//降序排列</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>less和greater优先队列</li>
 </ul>
-</li>
-</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namesapce <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, less&lt;<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">less&lt;<span class="keyword">int</span>&gt; : <span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></span><br><span class="line">greater&lt;<span class="keyword">int</span>&gt; : <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,7 +377,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C-函数/" rel="tag"># C++函数</a>
+            <a href="/tags/C-优先队列/" rel="tag"># C++优先队列</a>
           
         </div>
       
@@ -402,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/26/c++优先队列的总结/" rel="next" title="c++优先队列的总结">
-                <i class="fa fa-chevron-left"></i> c++优先队列的总结
+              <a href="/2018/10/26/最小生成树总结/" rel="next" title="最小生成树总结">
+                <i class="fa fa-chevron-left"></i> 最小生成树总结
               </a>
             
           </div>
@@ -412,8 +400,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/26/整数划分总结/" rel="prev" title="整数划分总结">
-                整数划分总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/26/c++中的sort与qsort的使用/" rel="prev" title="C++的sort与qsort">
+                C++的sort与qsort <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -548,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#c-中的sort与qsort的使用"><span class="nav-number">1.</span> <span class="nav-text">c++中的sort与qsort的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#c-优先队列的总结"><span class="nav-number">1.</span> <span class="nav-text">c++优先队列的总结</span></a></li></ol></div>
             
 
           </div>
